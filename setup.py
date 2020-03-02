@@ -5,4 +5,4 @@ setup(name='garmin-share-to-aprs',
 	description='Garmin MapShare to APRS',
 	url='https://github.com/rmc47/garmin-share-to-aprs',
 	author='Robert Chipperfield',
-	packages=['aprs','aprslib'])
+	install_requires=['aprs','aprslib'])
