@@ -25,7 +25,7 @@ course = float(extendedData.findall("./gis:Data[@name='Course']/gis:value",ns)[0
 latitude = float(extendedData.findall("./gis:Data[@name='Latitude']/gis:value",ns)[0].text)
 longitude = float(extendedData.findall("./gis:Data[@name='Longitude']/gis:value",ns)[0].text)
 altitude = float(extendedData.findall("./gis:Data[@name='Elevation']/gis:value",ns)[0].text.split()[0])
-position_time = datetime.datetime.strptime(extendedData.findall("./gis:Data[@name='Time UTC']/gis:value",ns)[0].text, "%m/%d/%Y %H:%M:%S %p").replace(tzinfo=datetime.timezone.utc)
+position_time = datetime.datetime.strptime(extendedData.findall("./gis:Data[@name='Time UTC']/gis:value",ns)[0].text, "%m/%d/%Y %I:%M:%S %p").replace(tzinfo=datetime.timezone.utc)
 
 print (latitude)
 print (longitude)
